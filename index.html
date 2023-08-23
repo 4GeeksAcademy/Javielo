@@ -1,104 +1,274 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />	
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/548fdd7b34.js" crossorigin="anonymous"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
-	<title>4Geeks Academy</title>
-	</head>
-	<body>
-		<div class=container>
-		    <form  class= "border border-1 mt-4">
-				<div class="row border border-1  bg-light rounded-top p-0 m-0">
-					<div class="col p-0 m-0 "><h2>Payment form example</h2></div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/6ce6fff8b6.js" crossorigin="anonymous"></script>
+    <title>Bootstrap Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="container-fluid mt-2">
+		<div class="row">
+			<div class="col-9 d-flex d-inline">
+				<i class="fa-brands fa-instagram fs-3 me-1"></i>
+				<h4>Instagram</h4>
+			</div>
+			<div class="col-3 d-flex m-0">
+<button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+	Create a new post
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+		  <p><strong>Caption:</strong></p>
+		  <textarea class="form-control p-2" id="message-text"></textarea>
+		  <button type="button" class="btn btn-secondary-bg text-emphasis btn-sm"><i class="fas fa-camera"></i></button>
+<button type="button" class="btn btn-secondary-bg text-emphasis btn-sm"><i class="fas fa-map-marker-alt"></i></button>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-success">Publish</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+				
+				
+					<div class="btn-group">
+	<button type="button" class="btn btn-secondary dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
+		<i class="far fa-cog"></i>
+	</button>
+	<ul class="dropdown-menu">
+	  <li><a class="dropdown-item" href="#">Profile</a></li>
+	  <li><a class="dropdown-item" href="#">Accessbility</a></li>
+	  <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+	  <li><hr class="dropdown-divider"></li>
+	  <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+	</ul>
+  </div>
+					</div>
+					
+		</div>
+		<div class="row">
+			<div class="col d-flex justify-content-center">
+		<ul class="nav nav-tabs">
+			<li class="nav-items" role="presentation">
+				<button class="nav-link" data-bs-toggle="tab" id="home-tab" data-bs-target="#home"
+				role="tab" aria-controls="home" aria-selected="true">
+				<i class="fas fa-th"></i>
+			</button>
+			</li>
+			<li class="nav-items" role="presentation">
+				<button class="nav-link" data-bs-toggle="tab" id="profile-tab" data-bs-target="#profile"
+				role="tab" aria-controls="profile" aria-selected="true">
+				<i class="fas fa-stop"></i>
+			</button>
+			</li>
+		</ul>
+		</div>
+	</div>
+		<div class="tab-content" id="mytabcontrol">
+			<div class="tab-pane fade show" role="tabpanel" id="home" aria-labelledby="home-tab">
+				<div class="row">
+					<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/1/400/400" alt="gato">
 				</div>
-                <div class="d-flex justify-content-center row text-danger mt-3 mx-3 ">
-					<div class="d-flex  col-12 bg-danger bg-opacity-25 p-2 border border-1 rounded">
-						<h6 >Some fields are missing</h6>
-					</div>
+				<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/15/400/400" alt="gato">
 				</div>
-				<div class="row  mt-4 mx-3  ">
-					<div class="col-5">    
-						<label for="card" class="form-label fw-bold"">Card #</label>
-						<input type="Text" name="card" placeholder="XXXXXXXXXXXXXXXX" class="form-control">
+				<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/40/400/400" alt="gato">
+				</div>
+				</div>
+				<div class="row">
+					<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/39/400/400" alt="gato">
+				</div>
+				<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/27/400/400" alt="gato">
+				</div>
+				<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/13/400/400" alt="gato">
+				</div>
+				</div>
+				<div class="row">
+					<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/7/400/400" alt="gato">
+				</div>
+				<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/10/400/400" alt="gato">
+				</div>
+				<div class="col-4 d-flex justify-content-center px-2 mb-3">
+					<img class="img-fluid w-100" src="https://picsum.photos/id/4/400/400" alt="gato">
+				</div>
+				</div>
+			</div>
+			<div class="tab-pane fade show" role="tabpanel" id="profile" aria-labelledby="profile-tab">
+				<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0"> my work</h1>
+						<p class="justify-content-end m-0">07/23</p>
 					</div>
-					<div class="col-3 ">    
-						<label for="cvc" class="form-label fw-bold">CVC#</label>
-						<input type="Text" name="cvc" placeholder="0000" class="form-control">
-					</div>
-				 	<div class="col-4 fw-bold ">    
-						<label for="amount" class="form-label">Amount</label>
-						<div class="d-flex"><p>$</p> 
-							<input type="Text" id="amount"placeholder="Amount" class="form-control" >
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/1/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>215 likes</strong></p>
+							<p>Me apasiona practicar cosas sobre mi trabajo</p>
+
 						</div>
 					</div>
-				</div>
-            	<div class="row  mt-4 mx-3" >   
-					<div class="col-6">
-						<label for="amount" class="form-label fw-bold">First Name</label>
-						<input type="Text" id="amount"placeholder="" class="form-control" >
+
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">La casacada</h1>
+						<p class="justify-content-end m-0">17/23</p>
 					</div>
-					<div class="col-6">
-						<label for="amount" class="form-label fw-bold">Last Name </label>
-						<input type="Text" id="amount"placeholder="" class="form-control" >
-			    	</div>
-				</div>
-				<div class="row  mt-4 mx-3">   
-					<div class="col-6">
-						<label for="amount" class="form-label fw-bold">City</label>
-						<input type="Text" id="amount"placeholder="" class="form-control" >
-					</div>
-					<div class="col-3">
-						<label for="amount" class="form-label fw-bold">State</label>
-						<select class="form-select" aria-label="Default select example">
-							<option selected>Pick a state</option>
-						</select>
-					</div>
-					<div class="col-3">
-						<label for="amount" class="form-label fw-bold">Postal Code</label>
-						<input type="Text" id="amount"placeholder="" class="form-control" >
-					</div>
-				</div>
- 				<div class="row  mt-4 mx-3">   
-					<div class="col-6 ">
-						<label for="amount" class="form-label fw-bold">We accept :</label>
-						<div class="bg-secondary rounded py-2 w-50">
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-								<label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard"></i></label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-								<label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-								<label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-diners-club"></i></label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-								<label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-amex"></i></label>
-							</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/15/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>200 likes</strong></p>
+							<p>"La casacada magica con un poder sanador incrible"</p>
+
 						</div>
 					</div>
-					<div class="col-6">
-							<label for="amount" class="form-label fw-bold">Message </label>
-							<textarea class="form-control" ></textarea>
-							<p class="text-muted">Add any notes here </p>	
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">Mi gato</h1>
+						<p class="justify-content-end m-0">22/23</p>
+					</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/40/400/400" alt="agua">
+						</div>
+						<div class="p-3">
+							<p><strong>250 likes</strong></p>
+							<p>Mi gato se encuentra realmente feliz hoy!!</p>
+
+						</div>
+					</div>
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">Musica clasica</h1>
+						<p class="justify-content-end m-0">22/23</p>
+					</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/39/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>170 likes</strong></p>
+							<p>Siempre es bueno distraerese con buena Musica</p>
+                       </div>
+					</div>
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">Playa</h1>
+						<p class="justify-content-end m-0">25/23</p>
+					</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/27/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>222 likes</strong></p>
+							<p>El atardecer en la playa no pierda con nada</p>
+                       </div>
+					</div>
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">Paisaje</h1>
+						<p class="justify-content-end m-0">25/23</p>
+					</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/13/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>111 likes</strong></p>
+							<p>Nada mejor que un buen paisaje para que te lleguen las ideas</p>
+                       </div>
+					</div>
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">Reunion</h1>
+						<p class="justify-content-end m-0">30/23</p>
+					</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/7/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>123 likes</strong></p>
+							<p>El trabajo en equipo y otros puntos de vista te permiten avanzar mas rapido</p>
+                       </div>
+					</div>
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">Desconexion</h1>
+						<p class="justify-content-end m-0">31/23</p>
+					</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/10/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>333 likes</strong></p>
+							<p>Toca desconectar para volver mas fuerte al trabajo</p>
+                       </div>
+					</div>
+					<div class="col-7 border border-secondary p-0 mt-3">
+						<div class="d-flex justify-content-between p-3 align-items-center">
+						<h1 class="justify-content-start m-0">Work</h1>
+						<p class="justify-content-end m-0">1/23</p>
+					</div>
+						<div class="img-wrap">
+							<img class="w-100" 
+							src="https://picsum.photos/id/4/400/400" alt="work">
+						</div>
+						<div class="p-3">
+							<p><strong>145 likes</strong></p>
+							<p>De vuelta al trabajo con toda a hacer lo que me gusta</p>
+                       </div>
 					</div>
 				</div>
-				<div class="row  py-3 px-3 bg-light m-0 p-0 border border-1" >
-                	<div  class="col-12  d-flex justify-content-end ">
-						<button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-						<button class="btn btn-primary" type="button">Send</button>
-					</div>
 				</div>
-			</form>
-	   </div>
-	</body>
+				</div>
+	
+		</div>
+	</div>
+	
+				
+
+			
+			
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>
